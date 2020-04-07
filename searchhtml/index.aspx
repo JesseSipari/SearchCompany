@@ -85,95 +85,114 @@
                             <div class="form-group row align-items-center">
                                 <div class="col-auto my-1">
                                     <div style="padding-top: 20px"></div>
-                                        <% String[] municipalities = { "Akaa", "Alajärvi", "Alavieska", "Alavus", "Asikkala", "Askola", "Aura", "Brändö", "Eckerö", "Enonkoski", "Enontekiö", "Espoo", "Eura", "Eurajoki", "Evijärvi", "Finström", "Forssa", "Föglö", "Geta", "Haapajärvi", "Haapavesi", "Hailuoto", "Halsua", "Hamina", "Hammarland", "Hankasalmi", "Hanko", "Harjavalta", "Hartola", "Hattula", "Hausjärvi", "Heinola", "Heinävesi", "Helsinki", "Hirvensalmi", "Hollola", "Honkajoki", "Huittinen", "Humppila", "Hyrynsalmi", "Hyvinkää", "Hämeenkyrö", "Hämeenlinna", "Ii", "Iisalmi", "Iitti", "Ikaalinen", "Ilmajoki", "Ilomantsi", "Imatra", "Inari", "Inkoo", "Isojoki", "Isokyrö", "Janakkala", "Joensuu", "Jokioinen", "Jomala", "Joroinen", "Joutsa", "Juuka", "Juupajoki", "Juva", "Jyväskylä", "Jämijärvi", "Jämsä", "Järvenpää", "Kaarina", "Kaavi", "Kajaani", "Kalajoki", "Kangasala", "Kangasniemi", "Kankaanpää", "Kannonkoski", "Kannus", "Karijoki", "Karkkila", "Karstula", "Karvia", "Kaskinen", "Kauhajoki", "Kauhava", "Kauniainen", "Kaustinen", "Keitele", "Kemi", "Kemijärvi", "Keminmaa", "Kemiönsaari", "Kempele", "Kerava", "Keuruu", "Kihniö", "Kinnula", "Kirkkonummi", "Kitee", "Kittilä", "Kiuruvesi", "Kivijärvi", "Kokemäki", "Kokkola", "Kolari", "Konnevesi", "Kontiolahti", "Korsnäs", "Koski Tl", "Kotka", "Kouvola", "Kristiinankaupunki", "Kruunupyy", "Kuhmo", "Kuhmoinen", "Kumlinge", "Kuopio", "Kuortane", "Kurikka", "Kustavi", "Kuusamo", "Kyyjärvi", "Kärkölä", "Kärsämäki", "Kökar", "Lahti", "Laihia", "Laitila", "Lapinjärvi", "Lapinlahti", "Lappajärvi", "Lappeenranta", "Lapua", "Laukaa", "Lemi", "Lemland", "Lempäälä", "Leppävirta", "Lestijärvi", "Lieksa", "Lieto", "Liminka", "Liperi", "Lohja", "Loimaa", "Loppi", "Loviisa", "Luhanka", "Lumijoki", "Lumparland", "Luoto", "Luumäki", "Maalahti", "Maarianhamina - Mariehamn", "Marttila", "Masku", "Merijärvi", "Merikarvia", "Miehikkälä", "Mikkeli", "Muhos", "Multia", "Muonio", "Mustasaari", "Muurame", "Mynämäki", "Myrskylä", "Mäntsälä", "Mänttä-Vilppula", "Mäntyharju", "Naantali", "Nakkila", "Nivala", "Nokia", "Nousiainen", "Nurmes", "Nurmijärvi", "Närpiö", "Orimattila", "Oripää", "Orivesi", "Oulainen", "Oulu", "Outokumpu", "Padasjoki", "Paimio", "Paltamo", "Parainen", "Parikkala", "Parkano", "Pedersören kunta", "Pelkosenniemi", "Pello", "Perho", "Pertunmaa", "Petäjävesi", "Pieksämäki", "Pielavesi", "Pietarsaari", "Pihtipudas", "Pirkkala", "Polvijärvi", "Pomarkku", "Pori", "Pornainen", "Porvoo", "Posio", "Pudasjärvi", "Pukkila", "Punkalaidun", "Puolanka", "Puumala", "Pyhtää", "Pyhäjoki", "Pyhäjärvi", "Pyhäntä", "Pyhäranta", "Pälkäne", "Pöytyä", "Raahe", "Raasepori", "Raisio", "Rantasalmi", "Ranua", "Rauma", "Rautalampi", "Rautavaara", "Rautjärvi", "Reisjärvi", "Riihimäki", "Ristijärvi", "Rovaniemi", "Ruokolahti", "Ruovesi", "Rusko", "Rääkkylä", "Saarijärvi", "Salla", "Salo", "Saltvik", "Sastamala", "Sauvo", "Savitaipale", "Savonlinna", "Savukoski", "Seinäjoki", "Sievi", "Siikainen", "Siikajoki", "Siikalatva", "Siilinjärvi", "Simo", "Sipoo", "Siuntio", "Sodankylä", "Soini", "Somero", "Sonkajärvi", "Sotkamo", "Sottunga", "Sulkava", "Sund", "Suomussalmi", "Suonenjoki", "Sysmä", "Säkylä", "Taipalsaari", "Taivalkoski", "Taivassalo", "Tammela", "Tampere", "Tervo", "Tervola", "Teuva", "Tohmajärvi", "Toholampi", "Toivakka", "Tornio", "Turku", "Tuusniemi", "Tuusula", "Tyrnävä", "Ulvila", "Urjala", "Utajärvi", "Utsjoki", "Uurainen", "Uusikaarlepyy", "Uusikaupunki", "Vaala", "Vaasa", "Valkeakoski", "Valtimo", "Vantaa", "Varkaus", "Vehmaa", "Vesanto", "Vesilahti", "Veteli", "Vieremä", "Vihti", "Viitasaari", "Vimpeli", "Virolahti", "Virrat", "Vårdö", "Vöyri", "Ylitornio", "Ylivieska", "Ylöjärvi", "Ypäjä", "Ähtäri;", "Äänekoski" };
+                                    <% String[] municipalities = { "Akaa", "Alajärvi", "Alavieska", "Alavus", "Asikkala", "Askola", "Aura", "Brändö", "Eckerö", "Enonkoski", "Enontekiö", "Espoo", "Eura", "Eurajoki", "Evijärvi", "Finström", "Forssa", "Föglö", "Geta", "Haapajärvi", "Haapavesi", "Hailuoto", "Halsua", "Hamina", "Hammarland", "Hankasalmi", "Hanko", "Harjavalta", "Hartola", "Hattula", "Hausjärvi", "Heinola", "Heinävesi", "Helsinki", "Hirvensalmi", "Hollola", "Honkajoki", "Huittinen", "Humppila", "Hyrynsalmi", "Hyvinkää", "Hämeenkyrö", "Hämeenlinna", "Ii", "Iisalmi", "Iitti", "Ikaalinen", "Ilmajoki", "Ilomantsi", "Imatra", "Inari", "Inkoo", "Isojoki", "Isokyrö", "Janakkala", "Joensuu", "Jokioinen", "Jomala", "Joroinen", "Joutsa", "Juuka", "Juupajoki", "Juva", "Jyväskylä", "Jämijärvi", "Jämsä", "Järvenpää", "Kaarina", "Kaavi", "Kajaani", "Kalajoki", "Kangasala", "Kangasniemi", "Kankaanpää", "Kannonkoski", "Kannus", "Karijoki", "Karkkila", "Karstula", "Karvia", "Kaskinen", "Kauhajoki", "Kauhava", "Kauniainen", "Kaustinen", "Keitele", "Kemi", "Kemijärvi", "Keminmaa", "Kemiönsaari", "Kempele", "Kerava", "Keuruu", "Kihniö", "Kinnula", "Kirkkonummi", "Kitee", "Kittilä", "Kiuruvesi", "Kivijärvi", "Kokemäki", "Kokkola", "Kolari", "Konnevesi", "Kontiolahti", "Korsnäs", "Koski Tl", "Kotka", "Kouvola", "Kristiinankaupunki", "Kruunupyy", "Kuhmo", "Kuhmoinen", "Kumlinge", "Kuopio", "Kuortane", "Kurikka", "Kustavi", "Kuusamo", "Kyyjärvi", "Kärkölä", "Kärsämäki", "Kökar", "Lahti", "Laihia", "Laitila", "Lapinjärvi", "Lapinlahti", "Lappajärvi", "Lappeenranta", "Lapua", "Laukaa", "Lemi", "Lemland", "Lempäälä", "Leppävirta", "Lestijärvi", "Lieksa", "Lieto", "Liminka", "Liperi", "Lohja", "Loimaa", "Loppi", "Loviisa", "Luhanka", "Lumijoki", "Lumparland", "Luoto", "Luumäki", "Maalahti", "Maarianhamina - Mariehamn", "Marttila", "Masku", "Merijärvi", "Merikarvia", "Miehikkälä", "Mikkeli", "Muhos", "Multia", "Muonio", "Mustasaari", "Muurame", "Mynämäki", "Myrskylä", "Mäntsälä", "Mänttä-Vilppula", "Mäntyharju", "Naantali", "Nakkila", "Nivala", "Nokia", "Nousiainen", "Nurmes", "Nurmijärvi", "Närpiö", "Orimattila", "Oripää", "Orivesi", "Oulainen", "Oulu", "Outokumpu", "Padasjoki", "Paimio", "Paltamo", "Parainen", "Parikkala", "Parkano", "Pedersören kunta", "Pelkosenniemi", "Pello", "Perho", "Pertunmaa", "Petäjävesi", "Pieksämäki", "Pielavesi", "Pietarsaari", "Pihtipudas", "Pirkkala", "Polvijärvi", "Pomarkku", "Pori", "Pornainen", "Porvoo", "Posio", "Pudasjärvi", "Pukkila", "Punkalaidun", "Puolanka", "Puumala", "Pyhtää", "Pyhäjoki", "Pyhäjärvi", "Pyhäntä", "Pyhäranta", "Pälkäne", "Pöytyä", "Raahe", "Raasepori", "Raisio", "Rantasalmi", "Ranua", "Rauma", "Rautalampi", "Rautavaara", "Rautjärvi", "Reisjärvi", "Riihimäki", "Ristijärvi", "Rovaniemi", "Ruokolahti", "Ruovesi", "Rusko", "Rääkkylä", "Saarijärvi", "Salla", "Salo", "Saltvik", "Sastamala", "Sauvo", "Savitaipale", "Savonlinna", "Savukoski", "Seinäjoki", "Sievi", "Siikainen", "Siikajoki", "Siikalatva", "Siilinjärvi", "Simo", "Sipoo", "Siuntio", "Sodankylä", "Soini", "Somero", "Sonkajärvi", "Sotkamo", "Sottunga", "Sulkava", "Sund", "Suomussalmi", "Suonenjoki", "Sysmä", "Säkylä", "Taipalsaari", "Taivalkoski", "Taivassalo", "Tammela", "Tampere", "Tervo", "Tervola", "Teuva", "Tohmajärvi", "Toholampi", "Toivakka", "Tornio", "Turku", "Tuusniemi", "Tuusula", "Tyrnävä", "Ulvila", "Urjala", "Utajärvi", "Utsjoki", "Uurainen", "Uusikaarlepyy", "Uusikaupunki", "Vaala", "Vaasa", "Valkeakoski", "Valtimo", "Vantaa", "Varkaus", "Vehmaa", "Vesanto", "Vesilahti", "Veteli", "Vieremä", "Vihti", "Viitasaari", "Vimpeli", "Virolahti", "Virrat", "Vårdö", "Vöyri", "Ylitornio", "Ylivieska", "Ylöjärvi", "Ypäjä", "Ähtäri;", "Äänekoski" };
+                                        String[] industries = { "Testi1", "Testi2", "Testi3", "Testi4", "Testi5" };
+                                        string selected = "";
+                                        string industry = "";
+                                        string date1 = "";
+                                        string date2 = "";
+                                        string[] results = new string[5];
+                                                           ;
 
-                                            string selected = "";
-                                            if (Request.Form.Count > 0)
+                                        if (Request.Form.Count > 0)
+                                        {
+                                            selected = Request.Form["Select1"];
+                                            industry = Request.Form["Select2"];
+                                            date1 = Request.Form["startDate"];
+                                            date2 = Request.Form["endDate"];
+                                            results = new[] {"Search Results:", "Municipality: ", "Industry: ", "Start date: ", "End date: "};
+
+
+                                        }
+                                    %>
+
+
+
+
+                                    <select id="Select1" name="Select1" class="custom-select mr-sm-2" style="width: auto;">
+                                        <option selected>Select Location</option>
+                                        <%
+                                            for (int i = 0; i < municipalities.Length; i++)
                                             {
-                                                selected = Request.Form["Select1"];
-                                            }
-                                        %>
-
-
-
-
-                                        <select id="Select1" name="Select1" class="custom-select mr-sm-2" style="width: auto;">
-                                            <option selected>Select Location</option>
-                                            <%
-                                                for (int i = 0; i < municipalities.Length; i++)
+                                                if (selected != "" && selected == municipalities[i])
+                                                    Response.Write("<option selected = \"selected\" value=\"" + municipalities[i] + "\">" + municipalities[i] + "</option>");
+                                                else
                                                 {
-                                                    if (selected != "" && selected == municipalities[i])
-                                                        Response.Write("<option selected = \"selected\" value=\"" + municipalities[i] + "\">" + municipalities[i] + "</option>");
-                                                    else
-                                                    {
-                                                        Response.Write("<option value=\"" + municipalities[i] + "\">" + municipalities[i] + "</option>");
-                                                    }
+                                                    Response.Write("<option value=\"" + municipalities[i] + "\">" + municipalities[i] + "</option>");
                                                 }
+                                            }
 
 
-                                            %>
+                                        %>
+                                    </select>
+                                    <select id="Select2" name="Select2" class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="width: auto;">
+                                        <option selected>Select Industry</option>
+                                        <%
+                                            for (int i = 0; i < industries.Length; i++)
+                                            {
+                                                if (industry != "" && industry == industries[i])
+                                                    Response.Write("<option selected = \"selected\" value=\"" + industries[i] + "\">" + industries[i] + "</option>");
+                                                else
+                                                {
+                                                    Response.Write("<option value=\"" + industries[i] + "\">" + industries[i] + "</option>");
+                                                }
+                                            }
 
-                                        </select>
-                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="width: auto;">
-                                            <option selected>Select Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                            <option value="Industry">Industry</option>
-                                        </select>
+
+                                        %>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                           <% Response.Write("<option value=\"" + selected + "\">" + selected + "</option>"); %> 
                         </div>
                     </div>
+                   <b><% Response.Write(results[0]); %></b>
+                    <% Response.Write("<option value=\""+ results[1] + selected + "\">"+ results[1]  + selected + "</option>"); %>
+                    <% Response.Write("<option value=\"" + results[2] + industry + "\">" + results[2] + industry + "</option>"); %>
+                    <% Response.Write("<option value=\""+ results[3] + date1 + "\">"+ results[3] + date1 + "</option>"); %>
+                    <% Response.Write("<option value=\""+ results[4] + date2 + "\">"+ results[4] + date2 + "</option>"); %>
                     <div style="padding-top: 20px"></div>
-                    <button id="SubmitButton" input type ="submit" type="submit" value = "Search" class="btn btn-outline-secondary">Search</button>
-                    </form>
-                </div>
-                <div style="padding-top: 20px"></div>
+                    <button id="SubmitButton" input type="submit" type="submit" value="Search" class="btn btn-outline-secondary">Search</button>
+                </form>
             </div>
-
-
-
-
-
-
+            <div style="padding-top: 20px"></div>
         </div>
-        <script>
-            var startDate = new Date(1800, 1, 1);
-            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
 
-            $('#startDate').datepicker({
-                firstDay: 1,
-                uiLibrary: 'bootstrap4',
-                iconsLibrary: 'fontawesome',
-                format: 'dd/mm/yyyy',
-                minDate: startDate,
-                maxDate: function () {
-                    return $('#endDate').val();
-                }
-            });
-            $('#endDate').datepicker({
-                firstDay: 1,
-                uiLibrary: 'bootstrap4',
-                iconsLibrary: 'fontawesome',
-                format: 'dd/mm/yyyy',
-                maxDate: today,
 
-                minDate: function () {
-                    return $('#startDate').val();
-                }
-            });
-        </script>
 
-    
+
+
+
+    </div>
+    <script>
+        var startDate = new Date(1800, 1, 1);
+        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+
+        $('#startDate').datepicker({
+            firstDay: 1,
+            uiLibrary: 'bootstrap4',
+            iconsLibrary: 'fontawesome',
+            format: 'dd/mm/yyyy',
+            minDate: startDate,
+            maxDate: function () {
+                return $('#endDate').val();
+            }
+        });
+        $('#endDate').datepicker({
+            firstDay: 1,
+            uiLibrary: 'bootstrap4',
+            iconsLibrary: 'fontawesome',
+            format: 'dd/mm/yyyy',
+            maxDate: today,
+
+            minDate: function () {
+                return $('#startDate').val();
+            }
+        });
+    </script>
+
+
 
 
     <div class="spacing"></div>
