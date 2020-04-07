@@ -55,7 +55,7 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <hr>
-                <form>
+                <form id="form1" runat="server" method="post" action="index.aspx">
                     <div class="col-12 middle-bar center-block text-center" style="margin-top: 0%">
                         <h5 class="center">Advanced search</h5>
                     </div>
@@ -85,14 +85,12 @@
                             <div class="form-group row align-items-center">
                                 <div class="col-auto my-1">
                                     <div style="padding-top: 20px"></div>
-                                    <form id="form1" runat="server" method="post" action="index.aspx">
                                         <% String[] municipalities = { "Akaa", "Alajärvi", "Alavieska", "Alavus", "Asikkala", "Askola", "Aura", "Brändö", "Eckerö", "Enonkoski", "Enontekiö", "Espoo", "Eura", "Eurajoki", "Evijärvi", "Finström", "Forssa", "Föglö", "Geta", "Haapajärvi", "Haapavesi", "Hailuoto", "Halsua", "Hamina", "Hammarland", "Hankasalmi", "Hanko", "Harjavalta", "Hartola", "Hattula", "Hausjärvi", "Heinola", "Heinävesi", "Helsinki", "Hirvensalmi", "Hollola", "Honkajoki", "Huittinen", "Humppila", "Hyrynsalmi", "Hyvinkää", "Hämeenkyrö", "Hämeenlinna", "Ii", "Iisalmi", "Iitti", "Ikaalinen", "Ilmajoki", "Ilomantsi", "Imatra", "Inari", "Inkoo", "Isojoki", "Isokyrö", "Janakkala", "Joensuu", "Jokioinen", "Jomala", "Joroinen", "Joutsa", "Juuka", "Juupajoki", "Juva", "Jyväskylä", "Jämijärvi", "Jämsä", "Järvenpää", "Kaarina", "Kaavi", "Kajaani", "Kalajoki", "Kangasala", "Kangasniemi", "Kankaanpää", "Kannonkoski", "Kannus", "Karijoki", "Karkkila", "Karstula", "Karvia", "Kaskinen", "Kauhajoki", "Kauhava", "Kauniainen", "Kaustinen", "Keitele", "Kemi", "Kemijärvi", "Keminmaa", "Kemiönsaari", "Kempele", "Kerava", "Keuruu", "Kihniö", "Kinnula", "Kirkkonummi", "Kitee", "Kittilä", "Kiuruvesi", "Kivijärvi", "Kokemäki", "Kokkola", "Kolari", "Konnevesi", "Kontiolahti", "Korsnäs", "Koski Tl", "Kotka", "Kouvola", "Kristiinankaupunki", "Kruunupyy", "Kuhmo", "Kuhmoinen", "Kumlinge", "Kuopio", "Kuortane", "Kurikka", "Kustavi", "Kuusamo", "Kyyjärvi", "Kärkölä", "Kärsämäki", "Kökar", "Lahti", "Laihia", "Laitila", "Lapinjärvi", "Lapinlahti", "Lappajärvi", "Lappeenranta", "Lapua", "Laukaa", "Lemi", "Lemland", "Lempäälä", "Leppävirta", "Lestijärvi", "Lieksa", "Lieto", "Liminka", "Liperi", "Lohja", "Loimaa", "Loppi", "Loviisa", "Luhanka", "Lumijoki", "Lumparland", "Luoto", "Luumäki", "Maalahti", "Maarianhamina - Mariehamn", "Marttila", "Masku", "Merijärvi", "Merikarvia", "Miehikkälä", "Mikkeli", "Muhos", "Multia", "Muonio", "Mustasaari", "Muurame", "Mynämäki", "Myrskylä", "Mäntsälä", "Mänttä-Vilppula", "Mäntyharju", "Naantali", "Nakkila", "Nivala", "Nokia", "Nousiainen", "Nurmes", "Nurmijärvi", "Närpiö", "Orimattila", "Oripää", "Orivesi", "Oulainen", "Oulu", "Outokumpu", "Padasjoki", "Paimio", "Paltamo", "Parainen", "Parikkala", "Parkano", "Pedersören kunta", "Pelkosenniemi", "Pello", "Perho", "Pertunmaa", "Petäjävesi", "Pieksämäki", "Pielavesi", "Pietarsaari", "Pihtipudas", "Pirkkala", "Polvijärvi", "Pomarkku", "Pori", "Pornainen", "Porvoo", "Posio", "Pudasjärvi", "Pukkila", "Punkalaidun", "Puolanka", "Puumala", "Pyhtää", "Pyhäjoki", "Pyhäjärvi", "Pyhäntä", "Pyhäranta", "Pälkäne", "Pöytyä", "Raahe", "Raasepori", "Raisio", "Rantasalmi", "Ranua", "Rauma", "Rautalampi", "Rautavaara", "Rautjärvi", "Reisjärvi", "Riihimäki", "Ristijärvi", "Rovaniemi", "Ruokolahti", "Ruovesi", "Rusko", "Rääkkylä", "Saarijärvi", "Salla", "Salo", "Saltvik", "Sastamala", "Sauvo", "Savitaipale", "Savonlinna", "Savukoski", "Seinäjoki", "Sievi", "Siikainen", "Siikajoki", "Siikalatva", "Siilinjärvi", "Simo", "Sipoo", "Siuntio", "Sodankylä", "Soini", "Somero", "Sonkajärvi", "Sotkamo", "Sottunga", "Sulkava", "Sund", "Suomussalmi", "Suonenjoki", "Sysmä", "Säkylä", "Taipalsaari", "Taivalkoski", "Taivassalo", "Tammela", "Tampere", "Tervo", "Tervola", "Teuva", "Tohmajärvi", "Toholampi", "Toivakka", "Tornio", "Turku", "Tuusniemi", "Tuusula", "Tyrnävä", "Ulvila", "Urjala", "Utajärvi", "Utsjoki", "Uurainen", "Uusikaarlepyy", "Uusikaupunki", "Vaala", "Vaasa", "Valkeakoski", "Valtimo", "Vantaa", "Varkaus", "Vehmaa", "Vesanto", "Vesilahti", "Veteli", "Vieremä", "Vihti", "Viitasaari", "Vimpeli", "Virolahti", "Virrat", "Vårdö", "Vöyri", "Ylitornio", "Ylivieska", "Ylöjärvi", "Ypäjä", "Ähtäri;", "Äänekoski" };
 
                                             string selected = "";
                                             if (Request.Form.Count > 0)
                                             {
-                                                selected =
-                                                Request.Form["Select1"];
+                                                selected = Request.Form["Select1"];
                                             }
                                         %>
 
@@ -114,32 +112,37 @@
 
 
                                             %>
-                                        </select>
-                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="width: auto;">
-                                        <option selected>Select Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                        <option value="Industry">Industry</option>
-                                    </select>
 
+                                        </select>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" style="width: auto;">
+                                            <option selected>Select Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                            <option value="Industry">Industry</option>
+                                        </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
+                           <% Response.Write("<option value=\"" + selected + "\">" + selected + "</option>"); %> 
                         </div>
                     </div>
-                <div style="padding-top: 20px"></div>
-                    <button id="SubmitButton" type="submit" class="btn btn-outline-secondary">Search</button>
-
                     <div style="padding-top: 20px"></div>
-                </form>
+                    <button id="SubmitButton" input type ="submit" type="submit" value = "Search" class="btn btn-outline-secondary">Search</button>
+                    </form>
+                </div>
+                <div style="padding-top: 20px"></div>
             </div>
+
+
+
+
 
 
         </div>
@@ -170,7 +173,7 @@
             });
         </script>
 
-    </div>
+    
 
 
     <div class="spacing"></div>
