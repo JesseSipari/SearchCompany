@@ -4,7 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Business Search</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="body2">
     <form id="form1" runat="server">
@@ -42,7 +51,7 @@
         <div class="form-row">
 
             <div class="col-12 middle-bar center-block text-center border" style="background-color:white; border-color:#707070">
-                <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                <form class="example" action="index.aspx" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search by company name" name="search2">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
@@ -50,7 +59,6 @@
                 <div class="col-12 middle-bar center-block text-center" style="margin-top:0%">
                     <h5 class="center">Search Results</h5>
                     <%  String Passedvalue = Request.Form["Select1"]; %>
-                </div>
                 <div class="row">
                     <div class="col">
                     </div>

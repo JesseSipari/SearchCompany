@@ -50,7 +50,7 @@
         <div class="form-row">
 
             <div class="col-12 middle-bar center-block text-center border" style="background-color: white; border-color: #707070">
-                <form class="example" action="sivu2.html" style="margin: auto; max-width: 300px">
+                <form class="example" action="Sivu2.aspx" style="margin: auto; max-width: 300px">
                     <input type="text" placeholder="Search by company name" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
